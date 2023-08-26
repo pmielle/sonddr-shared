@@ -3,6 +3,7 @@ export type Goal = {
     name: string,
     color: string,
     icon: string,
+    order: number,
 };
 
 export type Discussion = {
