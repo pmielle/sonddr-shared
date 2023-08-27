@@ -1,1 +1,1 @@
-export { Goal, Discussion } from "./types";
+export * from "./types";
