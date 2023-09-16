@@ -36,7 +36,11 @@ export type User = {
     bio: string,
 };
 
-export type ExternalLink = {};
+export type ExternalLinkType = "instagram" | "discord" | "slack" | "googledrive";
+export type ExternalLink = {
+    type: ExternalLinkType,
+    url: string,
+};
 
 export type Discussion = {
     id: string,
