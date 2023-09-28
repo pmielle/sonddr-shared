@@ -28,6 +28,24 @@ export type DbIdea = {
     supports: number,
 };
 
+export type Comment = {
+    id: string,
+    author: User,
+    ideaId: string,
+    date: Date,
+    content: string,
+    rating: number,
+};
+
+export type DbComment = {
+    id: string,
+    authorId: string,
+    ideaId: string,
+    date: Date,
+    content: string,
+    rating: number,
+};
+
 export type User = {
     id: string,
     name: string,
