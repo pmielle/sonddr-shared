@@ -62,5 +62,28 @@ export type ExternalLink = {
 
 export type Discussion = {
     id: string,
-    name: string,
+    users: User[],
+    lastMessage: Message;
+};
+
+export type DbDiscussion = {
+    id: string,
+    userIds: string[],
+    lastMessageId: string,
+};
+
+export type Message = {
+    id: string,
+    discussionId: string,
+    author: User,
+    date: Date,
+    content: string,    
+};
+
+export type DbMessage = {
+    id: string,
+    discussionId: string,
+    authorId: string,
+    date: Date,
+    content: string,
 };
