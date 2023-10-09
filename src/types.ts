@@ -72,6 +72,20 @@ export type DbDiscussion = {
     lastMessageId: string,
 };
 
+export type Notification = {
+    id: string,
+    from: User,
+    content: string,
+    date: Date,
+};
+
+export type DbNotification = {
+    id: string,
+    fromId: string,
+    content: string,
+    date: Date,
+};
+
 export type Message = {
     id: string,
     discussionId: string,
