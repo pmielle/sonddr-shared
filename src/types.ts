@@ -101,3 +101,9 @@ export type DbMessage = {
     date: Date,
     content: string,
 };
+
+export type Cheer = {
+    id: string,
+    authorId: string,
+    ideaId: string,
+};

@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/pmielle/sonddr-shared/issues"
   },
-  "homepage": "https://github.com/pmielle/sonddr-shared#readme"
+  "homepage": "https://github.com/pmielle/sonddr-shared#readme",
+  "type": "module"
 }
