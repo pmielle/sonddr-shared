@@ -107,3 +107,10 @@ export type Cheer = {
     authorId: string,
     ideaId: string,
 };
+
+export type Vote = {
+    id: string,
+    authorId: string,
+    commentId: string,
+    value: 1|-1,
+};
