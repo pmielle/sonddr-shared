@@ -35,6 +35,7 @@ export type Comment = {
     date: Date,
     content: string,
     rating: number,
+    userVote?: 1|-1,
 };
 
 export type DbComment = {
