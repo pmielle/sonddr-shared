@@ -15,6 +15,7 @@ export type Idea = {
     date: Date,
     content: string,
     supports: number,
+    userHasCheered: boolean,
 };
 
 export type DbIdea = {
