@@ -76,12 +76,14 @@ export type ExternalLink = {
 export type Discussion = {
     id: string,
     users: User[],
+    date: Date,
     lastMessage: Message;
 };
 
 export type DbDiscussion = {
     id: string,
     userIds: string[],
+    date?: Date,
     lastMessageId?: string,
 };
 
