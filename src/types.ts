@@ -1,3 +1,14 @@
+export type Change<T> = {
+    type: "delete"|"insert"|"update",
+    docId: string,
+    payload?: T  // empty if delete type
+};
+
+export type Doc = {
+    id: string,
+    [key: string]: any,
+};
+
 export type Goal = {
     id: string,
     name: string,
@@ -71,7 +82,7 @@ export type Discussion = {
 export type DbDiscussion = {
     id: string,
     userIds: string[],
-    lastMessageId: string,
+    lastMessageId?: string,
 };
 
 export type Notification = {
