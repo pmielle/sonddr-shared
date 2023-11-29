@@ -1,3 +1,7 @@
+export type PostResponse = {
+    insertedId: string,
+};
+
 export type Change<T> = {
     type: "delete"|"insert"|"update",
     docId: string,
