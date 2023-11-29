@@ -93,7 +93,7 @@ export type DbDiscussion = {
 
 export type Notification = {
     id: string,
-    toId: User,
+    toId: string,
     content: string,
     date: Date,
 };
