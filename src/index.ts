@@ -1,4 +1,4 @@
-export * from "./types";
+export * from "./types.js";
 
 export function makeCheerId(ideaId: string, userId: string): string {
     return `${ideaId}-${userId}`;
