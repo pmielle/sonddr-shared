@@ -31,6 +31,7 @@ export type Idea = {
     content: string,
     supports: number,
     userHasCheered: boolean,
+    cover?: string,
 };
 
 export type DbIdea = {
