@@ -99,6 +99,7 @@ export type Notification = {
     toIds: string[],
     content: string,
     date: Date,
+    readByIds: string[],
 };
 
 export type Message = {
