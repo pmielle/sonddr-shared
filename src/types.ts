@@ -83,7 +83,7 @@ export type Discussion = {
     users: User[],
     date: Date,
     lastMessage: Message,
-    readByIds: string[],
+    readByIds: Map<string, boolean>,
 };
 
 export type DbDiscussion = {
@@ -91,7 +91,7 @@ export type DbDiscussion = {
     userIds: string[],
     date?: Date,
     lastMessageId?: string,
-    readByIds: string[],
+    readByIds: Map<string, boolean>,
 };
 
 export type Notification = {
@@ -99,7 +99,7 @@ export type Notification = {
     toIds: string[],
     content: string,
     date: Date,
-    readByIds: string[],
+    readByIds: Map<string, boolean>,
 };
 
 export type Message = {
