@@ -82,7 +82,8 @@ export type Discussion = {
     id: string,
     users: User[],
     date: Date,
-    lastMessage: Message;
+    lastMessage: Message,
+    readByIds: string[],
 };
 
 export type DbDiscussion = {
@@ -90,11 +91,12 @@ export type DbDiscussion = {
     userIds: string[],
     date?: Date,
     lastMessageId?: string,
+    readByIds: string[],
 };
 
 export type Notification = {
     id: string,
-    toId: string,
+    toIds: string[],
     content: string,
     date: Date,
 };
