@@ -5,7 +5,7 @@ export type PostResponse = {
 export type Change<T> = {
     type: "delete"|"insert"|"update",
     docId: string,
-    payload?: T  // empty if delete type
+    payload: T,
 };
 
 export type Doc = {
@@ -107,7 +107,7 @@ export type Message = {
     discussionId: string,
     author: User,
     date: Date,
-    content: string,    
+    content: string,
 };
 
 export type DbMessage = {
