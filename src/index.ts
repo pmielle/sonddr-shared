@@ -15,3 +15,5 @@ export function isChange(obj: any): boolean {
 export const placeholder_id = "PLACEHOLDER_ID";
 
 export const ping_str = "SONDDR_PING";
+
+export const delete_str = "SONDDR_DELETE";
