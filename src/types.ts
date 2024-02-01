@@ -108,6 +108,7 @@ export type Message = {
     author: User,
     date: Date,
     content: string,
+    deleted: boolean,
 };
 
 export type DbMessage = {
@@ -116,6 +117,7 @@ export type DbMessage = {
     authorId: string,
     date: Date,
     content: string,
+    deleted: boolean,
 };
 
 export type Cheer = {
