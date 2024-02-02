@@ -130,6 +130,5 @@ export type Vote = {
     id: string,
     authorId: string,
     commentId: string,
-    ideaId: string,
     value: 1|-1,
 };
