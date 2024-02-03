@@ -31,6 +31,7 @@ export type Idea = {
     content: string,
     supports: number,
     userHasCheered: boolean,
+    fromUser: boolean,
     cover?: string,
 };
 
@@ -52,6 +53,7 @@ export type Comment = {
     date: Date,
     content: string,
     rating: number,
+    fromUser: boolean,
     userVote?: 1|-1,
 };
 
