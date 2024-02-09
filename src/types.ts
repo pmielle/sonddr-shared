@@ -74,7 +74,9 @@ export type User = {
     bio: string,
 };
 
-export type ExternalLinkType = "instagram" | "discord" | "slack" | "googledrive";
+export const externalLinkTypes = ["instagram", "discord", "slack", "googledrive"] as const;
+export type ExternalLinkType = typeof externalLinkTypes[number]; // https://jaketrent.com/post/loop-typescript-union-type/
+
 export type ExternalLink = {
     type: ExternalLinkType,
     url: string,
