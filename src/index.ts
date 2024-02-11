@@ -5,10 +5,10 @@ export * from "./types.js";
 
 
 export async function reviveUser(dbDoc: DbUser, userId: string): Promise<User> {
-	return (await reviveUsers([dbDoc], userId))[0];
+	return reviveUsers([dbDoc], userId)[0];
 }
 
-export async function reviveUsers(dbDocs: DbUser[], userId: string|undefined): Promise<User[]> {
+export function reviveUsers(dbDocs: DbUser[], userId: string|undefined): User[] {
 
     if (dbDocs.length == 0) { return []; }
 
