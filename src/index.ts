@@ -4,7 +4,7 @@ export * from "./types.js";
 
 
 
-export function reviveUser(dbDoc: DbUser, userId: string): User {
+export function reviveUser(dbDoc: DbUser, userId: string|undefined): User {
 	return reviveUsers([dbDoc], userId)[0];
 }
 
