@@ -1,4 +1,27 @@
+import { DbUser, User } from "./types.js";
+
 export * from "./types.js";
+
+
+
+export async function reviveUser(dbDoc: DbUser, userId: string): Promise<User> {
+	return (await reviveUsers([dbDoc], userId))[0];
+}
+
+export async function reviveUsers(dbDocs: DbUser[], userId: string|undefined): Promise<User[]> {
+
+    if (dbDocs.length == 0) { return []; }
+
+    // convert dbDocs into docs
+    const docs: User[] = dbDocs.map((dbDoc) => {
+        dbDoc["isUser"] = userId === undefined ? undefined : dbDoc.id === userId;
+        return dbDoc as any;
+    });
+
+    // return
+    return docs;
+
+}
 
 export function makeCheerId(ideaId: string, userId: string): string {
 	return `${ideaId}-${userId}`;
