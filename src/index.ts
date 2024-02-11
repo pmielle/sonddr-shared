@@ -4,7 +4,7 @@ export * from "./types.js";
 
 
 
-export async function reviveUser(dbDoc: DbUser, userId: string): Promise<User> {
+export function reviveUser(dbDoc: DbUser, userId: string): User {
 	return reviveUsers([dbDoc], userId)[0];
 }
 
