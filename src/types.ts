@@ -78,7 +78,7 @@ export type User = {
     date: Date,
     externalLinks: ExternalLink[],
     bio: string,
-    isUser: boolean,
+    isUser?: boolean,
 };
 
 export const externalLinkTypes = ["instagram", "discord", "slack", "googledrive"] as const;
