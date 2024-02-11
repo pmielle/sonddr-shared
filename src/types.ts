@@ -31,7 +31,6 @@ export type Idea = {
     content: string,
     supports: number,
     userHasCheered: boolean,
-    fromUser: boolean,
     cover?: string,
 };
 
@@ -53,7 +52,6 @@ export type Comment = {
     date: Date,
     content: string,
     rating: number,
-    fromUser: boolean,
     userVote?: 1|-1,
 };
 
@@ -66,12 +64,21 @@ export type DbComment = {
     rating: number,
 };
 
+export type DbUser = {
+    id: string,
+    name: string,
+    date: Date,
+    externalLinks: ExternalLink[],
+    bio: string,
+}
+
 export type User = {
     id: string,
     name: string,
     date: Date,
     externalLinks: ExternalLink[],
     bio: string,
+    isUser: boolean,
 };
 
 export const externalLinkTypes = ["instagram", "discord", "slack", "googledrive"] as const;
