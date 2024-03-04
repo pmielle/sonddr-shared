@@ -5,7 +5,8 @@ export type PostResponse = {
 export type Change<T> = {
     type: "delete"|"insert"|"update",
     docId: string,
-    payload: T,
+    docBefore?: T,
+    docAfter?: T,
 };
 
 export type Doc = {
