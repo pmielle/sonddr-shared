@@ -44,6 +44,7 @@ export type DbIdea = {
     date: Date,
     content: string,
     supports: number,
+    cover?: string,
 };
 
 export type Comment = {
@@ -71,6 +72,7 @@ export type DbUser = {
     date: Date,
     externalLinks: ExternalLink[],
     bio: string,
+    cover?: string,
 }
 
 export type User = {
@@ -80,6 +82,7 @@ export type User = {
     externalLinks: ExternalLink[],
     bio: string,
     isUser: boolean,
+    cover?: string,
 };
 
 export const externalLinkTypes = ["instagram", "discord", "slack", "googledrive"] as const;
