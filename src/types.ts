@@ -73,6 +73,7 @@ export type DbUser = {
     externalLinks: ExternalLink[],
     bio: string,
     cover?: string,
+    profilePicture?: string,
 }
 
 export type User = {
@@ -83,6 +84,7 @@ export type User = {
     bio: string,
     isUser: boolean,
     cover?: string,
+    profilePicture?: string,
 };
 
 export const externalLinkTypes = ["instagram", "discord", "slack", "googledrive"] as const;
